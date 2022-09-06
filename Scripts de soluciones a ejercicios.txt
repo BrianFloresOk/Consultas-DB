@@ -1,0 +1,89 @@
+/*MICRO DESAFIOS 1*/
+
+/*Ejercicio 1*/
+insert into genres (name, ranking, active)
+values ("Investigación", 13, 1)
+
+/*Ejercicio 2*/
+update genres 
+set name = "Investigación Científica"
+where id = 13
+
+/*Ejercicio 3*/
+delete from genres 
+where id = 13
+
+/*Ejercicio 4*/
+select * from movies
+
+/*Ejercicio 5*/
+select first_name, last_name, rating
+from actors
+
+/*Ejercicio 6*/
+select title as 'Titulo'
+from series
+
+/******************************/
+
+/*MICRO DESAFIOS 2*/
+
+/*Ejercicio 1*/
+select first_name as 'Nombre', last_name as 'Apellido', rating 
+from actors
+where rating > 7.5 
+
+/*Ejercicio 2*/
+select title as 'Titulo', rating, awards as 'Premios'
+from movies
+where rating > 7.5 and awards > 5
+
+/*Ejercicio 3*/
+select title as 'Titulo', rating
+from movies
+order by rating asc
+
+/******************************/
+
+/*MICRO DESAFIOS 3*/
+
+/*Ejercicio 1*/
+select title as 'Titulo'
+from movies
+limit 3
+
+/*Ejercicio 2*/
+select * from movies
+order by rating desc
+limit 5
+
+/*Ejercicio 3*/
+select * from movies
+order by rating desc 
+limit 5
+offset 5
+
+/*Ejercicio 4*/
+select * from actors
+limit 10
+offset 20
+
+/******************************/
+
+/*MICRO DESAFIOS 4*/
+
+/*Ejercicio 1*/
+select title as 'TItulo', rating
+from movies
+where title like 'Harry Potter%'
+
+/*Ejercicio 2*/
+select * from actors
+where first_name like 'Sam%'
+
+/*Ejercicio 3*/
+ select title as 'Titulo', release_date as 'Estreno'
+ from movies
+ where release_date
+ between "2004-1-1" and "2008-12-31"
+ order by release_date desc
